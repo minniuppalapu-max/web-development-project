@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>StillSpace | Yoga & Meditation</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,sans-serif;background:#f7f4ec;color:#243a32}
+a{text-decoration:none;color:inherit}
+.wrap{width:min(1120px,92%);margin:auto}
+header{display:flex;justify-content:space-between;align-items:center;padding:22px 0}
+.logo{font-family:Georgia,serif;font-size:28px;font-weight:bold}
+.logo span{color:#8c9f7f}
+nav{display:flex;gap:25px;color:#596b61}
+.btn{display:inline-block;background:#254b40;color:white;padding:13px 20px;border-radius:30px;font-weight:bold}
+.eyebrow{color:#71896c;text-transform:uppercase;letter-spacing:2px;font-size:12px;font-weight:bold}
+.hero{display:grid;grid-template-columns:1fr 1fr;gap:45px;align-items:center;padding:45px 0 70px}
+h1{font-family:Georgia,serif;font-size:clamp(45px,5vw,75px);font-weight:normal;line-height:1.05;margin:15px 0}
+h1 span{color:#8c9f7f}
+p{line-height:1.8;color:#68766d}
+.hero img{width:100%;height:450px;object-fit:cover;border-radius:45% 45% 20px 20px}
+.quote{background:#254b40;color:white;padding:30px;border-radius:25px;margin-bottom:65px;font-family:Georgia,serif;font-size:24px;line-height:1.5}
+.quote small{display:block;color:#cbd8c7;font-family:Arial,sans-serif;font-size:13px;margin-top:10px}
+section{padding:20px 0 60px}
+.heading{text-align:center;margin-bottom:30px}
+h2{font-family:Georgia,serif;font-size:38px;font-weight:normal;margin:10px 0}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{background:#fffdf8;border-radius:22px;overflow:hidden;border:1px solid #ebe9df}
+.card img{width:100%;height:220px;object-fit:cover}
+.body{padding:22px}
+.label{font-size:12px;font-weight:bold;color:#71896c;letter-spacing:1px}
+.card h3{font-family:Georgia,serif;font-size:23px;font-weight:normal}
+.line{display:flex;justify-content:space-between;border-top:1px solid #e9e9df;padding-top:14px;color:#53695d;font-size:13px;font-weight:bold;gap:10px}
+.schedule{background:#e7ebe0;border-radius:25px;padding:32px;display:grid;grid-template-columns:1fr 1.2fr;gap:30px}
+.schedule h2{font-size:35px}
+.classrow{display:grid;grid-template-columns:90px 1fr auto;gap:15px;align-items:center;padding:18px 0;border-bottom:1px solid #cbd5c6}
+.classrow:last-child{border:0}
+.time{font-weight:bold;color:#71896c}
+.classrow small{display:block;color:#68766d;margin-top:5px}
+.duration{background:white;border-radius:20px;padding:7px 10px;font-size:12px}
+footer{background:#1c3b32;color:white;padding:25px;text-align:center}
+footer p{color:#e9f0e6}
+@media(max-width:750px){
+ nav{display:none}
+ .hero,.schedule{grid-template-columns:1fr}
+ .hero img{height:330px}
+ .grid{grid-template-columns:1fr}
+ h1{font-size:48px}
+ .classrow{grid-template-columns:75px 1fr}
+ .duration{display:none}
+}
+</style>
+</head>
+<body>
+<header class="wrap">
+  <a class="logo" href="#">still<span>space.</span></a>
+  <nav>
+    <a href="#practice">Practices</a>
+    <a href="#classes">Classes</a>
+    <a href="#schedule">Schedule</a>
+  </nav>
+  <a class="btn" href="#schedule">Find Your Calm ↗</a>
+</header>
+
+<main class="wrap">
+<section class="hero">
+  <div>
+    <div class="eyebrow">Breathe · Move · Begin Again</div>
+    <h1>Make Space<br>for <span>Yourself.</span></h1>
+    <p>Discover yoga poses, meditation techniques, and mindful practices designed to support relaxation, flexibility, balance, and inner peace.</p>
+    <a class="btn" href="#practice">Explore Practices →</a>
+  </div>
+  <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=1000&q=85" alt="Person meditating peacefully">
+</section>
+
+<div class="quote">
+  “The present moment is the only time over which we have dominion.”
+  <small>— A mindful reminder</small>
+</div>
+
+<section id="practice">
+  <div class="heading">
+    <div class="eyebrow">Find what feels right</div>
+    <h2>Practice Your Way</h2>
+    <p>Simple routines to support strength, balance, and calm.</p>
+  </div>
+  <div class="grid">
+    <article class="card">
+      <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=800&q=85" alt="Yoga practice">
+      <div class="body">
+        <div class="label">MOVE WITH EASE</div>
+        <h3>Hatha Yoga</h3>
+        <p>Practise steady postures, comfortable stretches, and mindful breathing.</p>
+        <div class="line"><span>25–40 minutes</span><span>Beginner friendly</span></div>
+      </div>
+    </article>
+    <article class="card">
+      <img src="https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?auto=format&fit=crop&w=800&q=85" alt="Peaceful sunrise">
+      <div class="body">
+        <div class="label">QUIET THE MIND</div>
+        <h3>Guided Meditation</h3>
+        <p>Pause the noise and practise focusing your attention on the present.</p>
+        <div class="line"><span>5–15 minutes</span><span>All levels</span></div>
+      </div>
+    </article>
+    <article class="card">
+      <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=800&q=85" alt="Stretching exercise">
+      <div class="body">
+        <div class="label">REST & RESTORE</div>
+        <h3>Evening Stretch</h3>
+        <p>Release everyday tension with slow movement and relaxation.</p>
+        <div class="line"><span>15–20 minutes</span><span>Gentle</span></div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section id="classes">
+  <div class="heading">
+    <div class="eyebrow">Learn with support</div>
+    <h2>Our Wellness Classes</h2>
+    <p>Choose a practice that fits your energy and schedule.</p>
+  </div>
+  <div class="grid">
+    <article class="card"><div class="body"><div class="label">MON · WED · FRI</div><h3>Morning Flow</h3><p>Start your day with an energising movement sequence.</p><div class="line"><span>7:00 AM</span><span>45 min</span></div></div></article>
+    <article class="card"><div class="body"><div class="label">TUE · THU</div><h3>Mindful Reset</h3><p>Take a pause to centre your attention and breathe.</p><div class="line"><span>6:00 PM</span><span>20 min</span></div></div></article>
+    <article class="card"><div class="body"><div class="label">SATURDAY</div><h3>Gentle Stretch</h3><p>Enjoy slow stretching and a relaxing weekend routine.</p><div class="line"><span>9:30 AM</span><span>35 min</span></div></div></article>
+  </div>
+</section>
+
+<section id="schedule">
+  <div class="schedule">
+    <div>
+      <div class="eyebrow">Your weekly rhythm</div>
+      <h2>Make Time to Feel Good.</h2>
+      <p>Choose a session, find a quiet space, and move at a pace that feels comfortable for you.</p>
+      <a class="btn" href="mailto:hello@example.com">Ask About Classes ↗</a>
+    </div>
+    <div>
+      <div class="classrow"><div class="time">07:00 AM</div><div><b>Morning Flow</b><small>Movement · All levels</small></div><span class="duration">45 min</span></div>
+      <div class="classrow"><div class="time">12:30 PM</div><div><b>Breathing Break</b><small>Mindfulness · Beginner</small></div><span class="duration">10 min</span></div>
+      <div class="classrow"><div class="time">06:00 PM</div><div><b>Mindful Reset</b><small>Meditation · All levels</small></div><span class="duration">20 min</span></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <p>stillspace. | A Softer Place to Land</p>
+  <small>Practise within your comfort level.</small>
+</footer>
+</body>
+</html>

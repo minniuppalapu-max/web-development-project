@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GrandStay | Hotel Reservation - Vertical</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { font-family: Arial, Helvetica, sans-serif; background: #f8f7f4; color: #252a34; }
+a { text-decoration: none; color: inherit; }
+
+/* HEADER - VERTICAL */
+header { width: 100%; background: #ffffff; padding: 20px; display: flex; flex-direction: column; align-items: center; gap: 18px; box-shadow: 0 4px 20px rgba(0,0,0,0.06); }
+.logo { font-size: 27px; font-weight: bold; color: #b68a45; }
+.logo span { color: #202b38; }
+nav { display: flex; flex-direction: column; align-items: center; gap: 12px; }
+nav a { font-size: 14px; font-weight: bold; }
+.nav-btn { background: #b68a45; color: white; padding: 12px 22px; border-radius: 5px; }
+
+/* HERO - VERTICAL */
+.hero { min-height: 500px; background: linear-gradient(rgba(15,27,39,0.88), rgba(15,27,39,0.6)), url("https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=85"); background-size: cover; background-position: center; display: flex; align-items: center; justify-content: center; padding: 60px 20px; color: white; text-align: center; }
+.hero-content { max-width: 600px; }
+.tagline { color: #e7bf7b; text-transform: uppercase; letter-spacing: 4px; font-size: 12px; font-weight: bold; margin-bottom: 20px; }
+.hero h1 { font-family: Georgia, serif; font-size: 42px; line-height: 1.2; margin-bottom: 20px; }
+.hero h1 span { color: #e8bd76; }
+.hero p { font-size: 16px; line-height: 1.8; color: #e5e7eb; margin-bottom: 30px; }
+.hero-btn { display: inline-block; background: #b68a45; color: white; padding: 15px 30px; border-radius: 5px; font-weight: bold; }
+
+/* BOOKING FORM - VERTICAL */
+.booking-section { padding: 0 20px; margin-top: -30px; position: relative; z-index: 2; }
+.booking-form { background: white; padding: 25px; display: flex; flex-direction: column; gap: 18px; border-radius: 10px; box-shadow: 0 15px 45px rgba(0,0,0,0.12); }
+.form-group label { display: block; font-size: 11px; font-weight: bold; color: #6b7280; margin-bottom: 8px; text-transform: uppercase; }
+.form-group input, .form-group select { width: 100%; padding: 14px; border: 1px solid #e1e4e8; border-radius: 5px; background: #fafafa; }
+.search-btn { border: none; background: #202b38; color: white; padding: 16px; border-radius: 5px; font-weight: bold; cursor: pointer; }
+
+/* SECTIONS - VERTICAL */
+.section { padding: 70px 20px; }
+.section-heading { text-align: center; margin-bottom: 35px; }
+.section-heading .small-title { color: #b68a45; font-weight: bold; letter-spacing: 3px; font-size: 11px; text-transform: uppercase; }
+.section-heading h2 { font-family: Georgia, serif; font-size: 32px; margin-top: 12px; color: #202b38; }
+.section-heading p { color: #777; margin-top: 12px; line-height: 1.7; }
+
+/* ROOMS - VERTICAL STACK */
+.rooms { display: flex; flex-direction: column; gap: 25px; max-width: 500px; margin: 0 auto; }
+.room-card { background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 25px rgba(0,0,0,0.06); }
+.room-image { height: 230px; position: relative; overflow: hidden; }
+.room-image img { width: 100%; height: 100%; object-fit: cover; }
+.room-badge { position: absolute; top: 15px; left: 15px; background: #b68a45; color: white; padding: 7px 12px; border-radius: 4px; font-size: 10px; font-weight: bold; }
+.room-info { padding: 22px; }
+.rating { color: #d49b36; font-size: 13px; margin-bottom: 10px; }
+.room-info h3 { font-family: Georgia, serif; font-size: 22px; margin-bottom: 10px; }
+.room-info p { font-size: 14px; color: #777; line-height: 1.6; margin-bottom: 15px; }
+.room-features { display: flex; flex-direction: column; gap: 6px; font-size: 12px; color: #59616b; padding-bottom: 15px; border-bottom: 1px solid #eee; }
+.room-bottom { display: flex; flex-direction: column; gap: 12px; margin-top: 18px; align-items: flex-start; }
+.price { color: #b68a45; font-size: 22px; font-weight: bold; }
+.price span { font-size: 11px; color: #888; font-weight: normal; }
+.details-btn { border: 1px solid #b68a45; padding: 10px 18px; color: #b68a45; font-size: 12px; font-weight: bold; border-radius: 4px; text-align: center; width: 100%; }
+
+/* WHY US - VERTICAL */
+.why-us { background: #202b38; color: white; }
+.why-us .section-heading h2 { color: white; }
+.why-us .section-heading p { color: #c3c9d0; }
+.benefits { display: flex; flex-direction: column; gap: 20px; max-width: 500px; margin: 0 auto; }
+.benefit-card { text-align: center; padding: 28px 20px; border: 1px solid rgba(255,255,255,0.15); border-radius: 10px; }
+.benefit-icon { font-size: 34px; margin-bottom: 15px; }
+.benefit-card h3 { color: #e8bd76; font-size: 18px; margin-bottom: 10px; }
+.benefit-card p { font-size: 13px; line-height: 1.7; color: #c3c9d0; }
+
+/* TESTIMONIAL - VERTICAL */
+.testimonial { max-width: 500px; margin: auto; text-align: center; background: white; padding: 35px 25px; border-radius: 12px; box-shadow: 0 8px 35px rgba(0,0,0,0.06); }
+.quote-icon { color: #b68a45; font-size: 50px; font-family: Georgia, serif; }
+.testimonial p { color: #59616b; font-size: 16px; line-height: 1.8; margin: 15px 0 20px; }
+
+/* CTA - VERTICAL */
+.cta { margin: 0 20px 60px; padding: 40px 25px; border-radius: 12px; text-align: center; color: white; background: linear-gradient(180deg, #202b38, #574730); }
+.cta h2 { font-family: Georgia, serif; font-size: 28px; margin-bottom: 15px; }
+.cta p { color: #e0e0e0; line-height: 1.7; margin-bottom: 25px; }
+
+/* FOOTER - VERTICAL */
+footer { background: #151e28; color: white; padding: 40px 20px 20px; }
+.footer-content { display: flex; flex-direction: column; gap: 35px; padding-bottom: 30px; text-align: center; }
+.footer-about p { color: #b8c0c9; line-height: 1.7; font-size: 14px; margin-top: 15px; }
+footer h3 { color: #e8bd76; margin-bottom: 15px; }
+.footer-links a { display: block; color: #b8c0c9; margin-bottom: 10px; font-size: 14px; }
+.copyright { text-align: center; border-top: 1px solid #303944; padding-top: 20px; color: #aab2bc; font-size: 11px; }
+</style>
+</head>
+<body>
+
+<header>
+<a href="#" class="logo">Grand<span>Stay.</span></a>
+<nav>
+<a href="#home">Home</a>
+<a href="#rooms">Rooms</a>
+<a href="#services">Services</a>
+<a href="#reviews">Reviews</a>
+<a href="#booking" class="nav-btn">Book Now</a>
+</nav>
+</header>
+
+<section class="hero" id="home">
+<div class="hero-content">
+<div class="tagline">Welcome to GrandStay Luxury Hotel</div>
+<h1>Your Perfect Stay,<br><span>Our Greatest Pleasure.</span></h1>
+<p>Experience luxury, comfort, and unforgettable hospitality. Discover your perfect room and turn every journey into a beautiful memory.</p>
+<a href="#booking" class="hero-btn">Explore & Book Now →</a>
+</div>
+</section>
+
+<section class="booking-section" id="booking">
+<form class="booking-form">
+<div class="form-group"><label>Check In</label><input type="date" required></div>
+<div class="form-group"><label>Check Out</label><input type="date" required></div>
+<div class="form-group"><label>Guests</label><select><option>1 Guest</option><option selected>2 Guests</option><option>3 Guests</option><option>4 Guests</option></select></div>
+<div class="form-group"><label>Room Type</label><select><option>Deluxe Room</option><option>Luxury Suite</option><option>Executive Room</option></select></div>
+<button type="submit" class="search-btn">SEARCH ROOMS</button>
+</form>
+</section>
+
+<section class="section" id="rooms">
+<div class="section-heading"><div class="small-title">Our Accommodation</div><h2>Discover Our Luxury Rooms</h2></div>
+<div class="rooms">
+<article class="room-card"><div class="room-image"><img src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=900&q=80"><span class="room-badge">POPULAR CHOICE</span></div><div class="room-info"><div class="rating">★★★★★ 4.9/5</div><h3>Deluxe Room</h3><p>Enjoy a peaceful retreat with elegant interiors and comfortable bed.</p><div class="room-features"><span>🛏 King Bed</span><span>❄ AC</span><span>📶 Free Wi-Fi</span></div><div class="room-bottom"><div class="price">₹3,499 <span>/ night</span></div><a href="#" class="details-btn">BOOK ROOM</a></div></div></article>
+<article class="room-card"><div class="room-image"><img src="https://images.unsplash.com/photo-1591088398332-8a7791972843?auto=format&fit=crop&w=900&q=80"><span class="room-badge">LUXURY</span></div><div class="room-info"><div class="rating">★★★★★ 4.8/5</div><h3>Luxury Suite</h3><p>Experience spacious living and premium comfort for special occasions.</p><div class="room-features"><span>🛋 Living Area</span><span>❄ AC</span><span>📶 Free Wi-Fi</span></div><div class="room-bottom"><div class="price">₹5,999 <span>/ night</span></div><a href="#" class="details-btn">BOOK ROOM</a></div></div></article>
+<article class="room-card"><div class="room-image"><img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=900&q=80"><span class="room-badge">PREMIUM</span></div><div class="room-info"><div class="rating">★★★★★ 4.7/5</div><h3>Executive Room</h3><p>Sophisticated room with modern amenities for business travellers.</p><div class="room-features"><span>🪑 Work Desk</span><span>❄ AC</span><span>📶 Free Wi-Fi</span></div><div class="room-bottom"><div class="price">₹4,499 <span>/ night</span></div><a href="#" class="details-btn">BOOK ROOM</a></div></div></article>
+</div>
+</section>
+
+<section class="section why-us" id="services">
+<div class="section-heading"><div class="small-title">The GrandStay Experience</div><h2>Why Choose Our Hotel?</h2></div>
+<div class="benefits">
+<div class="benefit-card"><div class="benefit-icon">🛎️</div><h3>24/7 Room Service</h3><p>Enjoy convenient assistance and hospitality whenever you need it.</p></div>
+<div class="benefit-card"><div class="benefit-icon">🍽️</div><h3>Fine Dining</h3><p>Discover delicious meals and memorable dining experiences.</p></div>
+<div class="benefit-card"><div class="benefit-icon">🏊</div><h3>Swimming Pool</h3><p>Relax and enjoy your leisure time in a peaceful atmosphere.</p></div>
+<div class="benefit-card"><div class="benefit-icon">🚗</div><h3>Free Parking</h3><p>Enjoy convenient parking during your hotel stay.</p></div>
+</div>
+</section>
+
+<section class="section" id="reviews">
+<div class="section-heading"><div class="small-title">Guest Experiences</div><h2>What Our Guests Say</h2></div>
+<div class="testimonial"><div class="quote-icon">“</div><div class="rating">★★★★★</div><p>"An absolutely wonderful experience! The rooms were beautiful, the staff were welcoming, and every detail made our stay special."</p><h3>Priya Sharma</h3></div>
+</section>
+
+<section class="cta"><h2>Your Dream Stay Is Just a Click Away</h2><p>Make your next trip special with exceptional comfort and warm hospitality.</p><a href="#booking" class="hero-btn">Reserve Your Room →</a></section>
+
+<footer><div class="footer-content"><div class="footer-about"><a href="#" class="logo">Grand<span>Stay.</span></a><p>Bringing comfort, elegance, and exceptional hospitality together.</p></div><div class="footer-links"><h3>Quick Links</h3><a href="#home">Home</a><a href="#rooms">Rooms</a><a href="#services">Services</a></div><div class="footer-links"><h3>Contact</h3><a href="#">info@grandstay.example</a><a href="#">+91 98765 43210</a></div></div><div class="copyright">© 2026 GrandStay Hotel. All rights reserved.</div></footer>
+
+</body>
+</html>
